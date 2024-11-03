@@ -29,111 +29,111 @@ server = "six_card"
 model_type = "student"
 if server == "411":
     if model_type == "student":
-        pretrained_dir = "/datb/notebook/CPS/work1/mmpretrain/work_dirs/config_distiller_finetune/20230916_170242/epoch_426.pth"
+        pretrained_dir = "/datb/notebook/Anonymous/work1/mmpretrain/work_dirs/config_distiller_finetune/20230916_170242/epoch_426.pth"
     elif model_type == "teacher":
-        pretrained_dir = "/datb/notebook/CPS/work1/attndistill/dino_deitsmall8_pretrain.pth"
-    data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+        pretrained_dir = "/datb/notebook/Anonymous/work1/attndistill/dino_deitsmall8_pretrain.pth"
+    data_root = "/datb/notebook/Anonymouswork1/data/tiny-imagenet-200"
 elif server == "old":
-    # pretrained_dir = "/media/data1/zhangzherui/code/attndistill/dino_deitsmall8_pretrain.pth"
-    pretrained_dir = "/media/data1/zhangzherui/code/mmpretrain/work_dirs/distiller/best_val_loss_epoch_796.pth"
-    # data_root = "/media/data2/zhangzherui/data/tiny-imagenet-200"
-    data_root = "/media/data1/zhangzherui/data/imagenet"
+    # pretrained_dir = "/media/data1/Anonymous/code/attndistill/dino_deitsmall8_pretrain.pth"
+    pretrained_dir = "/media/data1/Anonymous/code/mmpretrain/work_dirs/distiller/best_val_loss_epoch_796.pth"
+    # data_root = "/media/data2/Anonymous/data/tiny-imagenet-200"
+    data_root = "/media/data1/Anonymous/data/imagenet"
 elif server == "new":
-    data_root = "/media/data/zhangzherui/data/cifar100"
+    data_root = "/media/data/Anonymous/data/cifar100"
 
 
     # *************************************** vit ************************
     # base
-    # pretrained_dir = "/media/data/zhangzherui/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
+    # pretrained_dir = "/media/data/Anonymous/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
     # small
-    # pretrained_dir = "/media/data/zhangzherui/data/weights/deit_small_patch16_224-cd65a155.pth"
+    # pretrained_dir = "/media/data/Anonymous/data/weights/deit_small_patch16_224-cd65a155.pth"
     # tiny
-    # pretrained_dir = "/media/data/zhangzherui/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
+    # pretrained_dir = "/media/data/Anonymous/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
 
     # *************************************** DeiT ************************
     if model_name == "DeiT-B":
         find_unused_parameters = True  # for deit
-        teacher_path = "/media/data/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
-        pretrained_dir = "/media/data/zhangzherui/data/weights/deit_base_distilled_patch16_224-df68dfff.pth"
+        teacher_path = "/media/data/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/deit_base_distilled_patch16_224-df68dfff.pth"
     elif model_name == "DeiT-S":
-        teacher_path = "/media/data/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
+        teacher_path = "/media/data/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
         find_unused_parameters = True  # for deit
-        pretrained_dir = "/media/data/zhangzherui/data/weights/deit_small_distilled_patch16_224-649709d9.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/deit_small_distilled_patch16_224-649709d9.pth"
     elif model_name == "DeiT-T":
-        teacher_path = "/media/data/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
+        teacher_path = "/media/data/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
         find_unused_parameters = True  # for deit
-        pretrained_dir = "/media/data/zhangzherui/data/weights/deit_tiny_distilled_patch16_224-b40b3cf7.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/deit_tiny_distilled_patch16_224-b40b3cf7.pth"
     elif model_name == "LeViT_192":
-        teacher_path = "/media/data/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
+        teacher_path = "/media/data/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
         find_unused_parameters = True  # for deit
-        pretrained_dir = "/media/data/zhangzherui/data/weights/LeViT-192-92712e41.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/LeViT-192-92712e41.pth"
     elif model_name == "LeViT_256":
-        teacher_path = "/media/data/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
+        teacher_path = "/media/data/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
         find_unused_parameters = True  # for deit
-        pretrained_dir = "/media/data/zhangzherui/data/weights/LeViT-256-13b5763e.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/LeViT-256-13b5763e.pth"
     elif model_name == "EViT_Base":
-        pretrained_dir = "/media/data/zhangzherui/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
     elif model_name == "EViT_Tiny":
-        pretrained_dir = "/media/data/zhangzherui/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
     elif model_name == "T2T_ViT_19":
-        pretrained_dir = "/media/data/zhangzherui/data/weights/82.4_T2T_ViTt_19.pth.tar"
+        pretrained_dir = "/media/data/Anonymous/data/weights/82.4_T2T_ViTt_19.pth.tar"
     elif model_name == "PVT_Tiny":
-        pretrained_dir = "/media/data/zhangzherui/data/weights/pvt_tiny.pth"
+        pretrained_dir = "/media/data/Anonymous/data/weights/pvt_tiny.pth"
     # PVT Small
 
-    # pretrained_dir = "/media/data/zhangzherui/data/weights/pvt_small.pth"
-    # pretrained_dir = "/media/data/zhangzherui/data/weights/pvt_medium.pth"
-    # pretrained_dir = "/media/data/zhangzherui/data/weights/pvt_tiny.pth"
+    # pretrained_dir = "/media/data/Anonymous/data/weights/pvt_small.pth"
+    # pretrained_dir = "/media/data/Anonymous/data/weights/pvt_medium.pth"
+    # pretrained_dir = "/media/data/Anonymous/data/weights/pvt_tiny.pth"
 
 
 elif server == "six_card":
     # find_unused_parameters = True  # for deit + levit
-    # data_root = "/work/zhangzherui/data/tiny-imagenet-200"
-    data_root = "/work/zhangzherui/data/cifar100"
-    # pretrained_dir = "/work/zhangzherui/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
+    # data_root = "/work/Anonymous/data/tiny-imagenet-200"
+    data_root = "/work/Anonymous/data/cifar100"
+    # pretrained_dir = "/work/Anonymous/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
     if model_name == "ViT_S":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_small_patch16_224-cd65a155.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_small_patch16_224-cd65a155.pth"
     elif model_name == "ViT_B":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
     elif model_name == "ViT_T":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
     elif model_name == "DyViT_B":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
     elif model_name == "DyViT_S":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_small_patch16_224-cd65a155.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_small_patch16_224-cd65a155.pth"
     elif model_name == "DyViT_T":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
     elif model_name == "EViT_Small":
-        pretrained_dir = "/work/zhangzherui/data/weights/deit_small_patch16_224-cd65a155.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/deit_small_patch16_224-cd65a155.pth"
     elif model_name == "T2T_ViT_14":
-        pretrained_dir = "/work/zhangzherui/data/weights/81.7_T2T_ViTt_14.pth.tar"
+        pretrained_dir = "/work/Anonymous/data/weights/81.7_T2T_ViTt_14.pth.tar"
     elif model_name == "PVT_Small":
-        pretrained_dir = "/work/zhangzherui/data/weights/pvt_small.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/pvt_small.pth"
     elif model_name == "PVT_Medium":
-        pretrained_dir = "/work/zhangzherui/data/weights/pvt_medium.pth"
+        pretrained_dir = "/work/Anonymous/data/weights/pvt_medium.pth"
     elif model_name == "LeViT_192":
-        pretrained_dir = '/work/zhangzherui/data/weights/LeViT-192-92712e41.pth'
+        pretrained_dir = '/work/Anonymous/data/weights/LeViT-192-92712e41.pth'
         find_unused_parameters = True  # for deit
-        teacher_path = "/work/zhangzherui/code/mmpretrain/work_dirs/config_finetune_cifar/weights/vit_s.pth"
+        teacher_path = "/work/Anonymous/code/mmpretrain/work_dirs/config_finetune_cifar/weights/vit_s.pth"
     elif model_name == "LeViT_256":
-        pretrained_dir = '/work/zhangzherui/data/weights/LeViT-256-13b5763e.pth'
+        pretrained_dir = '/work/Anonymous/data/weights/LeViT-256-13b5763e.pth'
         find_unused_parameters = True  # for deit
-        teacher_path = "/work/zhangzherui/code/mmpretrain/work_dirs/config_finetune_cifar/weights/vit_s.pth"
+        teacher_path = "/work/Anonymous/code/mmpretrain/work_dirs/config_finetune_cifar/weights/vit_s.pth"
     elif model_name == "LeViT_128":
-        pretrained_dir = '/work/zhangzherui/data/weights/LeViT-128-b88c2750.pth'
+        pretrained_dir = '/work/Anonymous/data/weights/LeViT-128-b88c2750.pth'
         # find_unused_parameters = True  # for deit
-        # teacher_path = "/work/zhangzherui/code/mmpretrain/work_dirs/config_finetune_cifar/weights/vit_s.pth"
+        # teacher_path = "/work/Anonymous/code/mmpretrain/work_dirs/config_finetune_cifar/weights/vit_s.pth"
             # find_unused_parameters = True  # for deit
     # t2t 14
-    # pretrained_dir = '/work/zhangzherui/data/weights/81.7_T2T_ViTt_14.pth.tar'
+    # pretrained_dir = '/work/Anonymous/data/weights/81.7_T2T_ViTt_14.pth.tar'
     # t2t 19
-    # pretrained_dir = '/work/zhangzherui/data/weights/82.4_T2T_ViTt_19.pth.tar'
+    # pretrained_dir = '/work/Anonymous/data/weights/82.4_T2T_ViTt_19.pth.tar'
     # t2t 24
-    # pretrained_dir = '/work/zhangzherui/data/weights/82.6_T2T_ViTt_24.pth.tar'
+    # pretrained_dir = '/work/Anonymous/data/weights/82.6_T2T_ViTt_24.pth.tar'
 
     # levit
-    # pretrained_dir = '/work/zhangzherui/data/weights/LeViT-128-b88c2750.pth'
-    # pretrained_dir = '/work/zhangzherui/data/weights/LeViT-192-92712e41.pth'
+    # pretrained_dir = '/work/Anonymous/data/weights/LeViT-128-b88c2750.pth'
+    # pretrained_dir = '/work/Anonymous/data/weights/LeViT-192-92712e41.pth'
 
 
 model = dict(

@@ -15,14 +15,14 @@ model = dict(
 train_dataloader = dict(
     batch_size=128,
     dataset = dict(
-        data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+        data_root = "/datb/notebook/Anonymous/work1/data/tiny-imagenet-200"
     )
 )
 val_dataloader = dict(
     batch_size=128,
 
     dataset = dict(
-        data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+        data_root = "/datb/notebook/Anonymous/work1/data/tiny-imagenet-200"
     )
 )
 

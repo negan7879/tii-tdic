@@ -91,9 +91,9 @@ model = VisionTransformer(img_size=224,
                               num_classes=num_classes,
                           config_ic=config_ic)
 
-with open('/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/last_checkpoint', 'r') as file:
+with open('/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/last_checkpoint', 'r') as file:
     pretrained_dir = file.readline()
-pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/best_accuracy_top1_epoch_147.pth"
+pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/best_accuracy_top1_epoch_147.pth"
 weights_dict_ = torch.load(pretrained_dir, map_location="cpu")
 weights_dict = weights_dict_["state_dict"]
 checkpoint = OrderedDict()
@@ -109,7 +109,7 @@ model.mode = "train"
 model.ic_list[3].update_kept_token_number()
 model.ic_list[6].update_kept_token_number()
 model.ic_list[9].update_kept_token_number()
-data_root = "/work/zhangzherui/data/tiny-imagenet-200"
+data_root = "/work/Anonymous/data/tiny-imagenet-200"
 func = nn.Softmax(dim=1).cuda()
 val_dataset = get_TinyImageNet(mode="val", data_root=data_root)
 
@@ -219,10 +219,10 @@ with torch.no_grad():
                 # unimage = cv2.resize(unimage, (64,64))
                 # plt.axis('off')
 
-                # plt.savefig("/work/zhangzherui/data/tiny-imagenet-200/output/{}.png".format(step), dpi = 600)
-                plt.savefig("/work/zhangzherui/data/tiny-imagenet-200/output_dir/{}.png".format(step), dpi = 600, bbox_inches='tight')
+                # plt.savefig("/work/Anonymous/data/tiny-imagenet-200/output/{}.png".format(step), dpi = 600)
+                plt.savefig("/work/Anonymous/data/tiny-imagenet-200/output_dir/{}.png".format(step), dpi = 600, bbox_inches='tight')
                 plt.imshow(unimage)
-                plt.savefig("/work/zhangzherui/data/tiny-imagenet-200/output_dir/{}_ori.png".format(step), dpi = 600,  bbox_inches='tight')
+                plt.savefig("/work/Anonymous/data/tiny-imagenet-200/output_dir/{}_ori.png".format(step), dpi = 600,  bbox_inches='tight')
                 if torch.argmax(pred) == labels:
                     correct_num += 1
         break

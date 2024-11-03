@@ -12,14 +12,14 @@ find_unused_parameters=True
 # )
 server = "old"
 if server == "411":
-    teacher_pretrained = "/datb/notebook/CPS/work1/attndistill/dino_deitsmall8_pretrain.pth"
-    data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+    teacher_pretrained = "/datb/notebook/Anonymous/work1/attndistill/dino_deitsmall8_pretrain.pth"
+    data_root = "/datb/notebook/Anonymous/work1/data/tiny-imagenet-200"
 elif server == "old":
-    teacher_pretrained = "/media/data1/zhangzherui/code/attndistill/dino_deitsmall8_pretrain.pth"
-    data_root = "/media/data2/zhangzherui/data/tiny-imagenet-200"
+    teacher_pretrained = "/media/data1/Anonymous/code/attndistill/dino_deitsmall8_pretrain.pth"
+    data_root = "/media/data2/Anonymous/data/tiny-imagenet-200"
 elif server == "new":
-    teacher_pretrained = "/media/data/zhangzherui/code/mmpretrain/dino_deitsmall8_pretrain.pth"
-    data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
+    teacher_pretrained = "/media/data/Anonymous/code/mmpretrain/dino_deitsmall8_pretrain.pth"
+    data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
 model = dict(
     _delete_ = True,
     type='ClassificationDistiller',

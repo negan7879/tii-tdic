@@ -171,38 +171,38 @@ x = torch.rand(1, 3, 224, 224)
 macs = profile_macs(model, x) * 1e-9
 print("macs = ", macs)
 
-# with open('/media/data/zhangzherui/code/mmpretrain/work_dirs/config_finetune/last_checkpoint', 'r') as file:
+# with open('/media/data/Anonymous/code/mmpretrain/work_dirs/config_finetune/last_checkpoint', 'r') as file:
 #     pretrained_dir = file.readline()
 
 
 # base vit weight
-# pretrained_dir = "/work/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
 # small vit weight
-pretrained_dir = "/work/zhangzherui/data/weights/vit_small_finetune_tinyimagenet.pth"
+pretrained_dir = "/work/Anonymous/data/weights/vit_small_finetune_tinyimagenet.pth"
 # tiny vit weight
-# pretrained_dir = "/work/zhangzherui/data/weights/vit-tiny_finetune_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/vit-tiny_finetune_tinyimagenet.pth"
 
 
 # deit
-# pretrained_dir = "/work/zhangzherui/data/weights/deit_tiny_tinyimagenet.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/deit_base_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/deit_tiny_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/deit_base_tinyimagenet.pth"
 
 # levit
-# pretrained_dir = "/media/data/zhangzherui/code/mmpretrain/work_dirs/config_finetune/epoch_100.pth"
+# pretrained_dir = "/media/data/Anonymous/code/mmpretrain/work_dirs/config_finetune/epoch_100.pth"
 
 
 # pvt
-# pretrained_dir = "/work/zhangzherui/data/weights/pvt_medium_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/pvt_medium_tinyimagenet.pth"
 
 # small vit evit weight
-# pretrained_dir = "/work/zhangzherui/data/weights/vit_evit_small-0.7.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/vit_evit_small_0.5.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/vit_evit_tiny_0.7.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/vit_evit_small-0.7.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/vit_evit_small_0.5.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/vit_evit_tiny_0.7.pth"
 
 # t2t
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_finetune/weights/t2t_14_tinyimaget.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_finetune/weights/t2t_19_tinyimaget.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_finetune/weights/t2t_24_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_finetune/weights/t2t_14_tinyimaget.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_finetune/weights/t2t_19_tinyimaget.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_finetune/weights/t2t_24_tinyimagenet.pth"
 
 weights_dict_ = torch.load(pretrained_dir, map_location="cpu")
 weights_dict = weights_dict_["state_dict"]
@@ -217,8 +217,8 @@ model = model.cuda()
 model.eval()
 model.mode = "val"
 
-data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
-# data_root = "/work/zhangzherui/data/tiny-imagenet-200"
+data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
+# data_root = "/work/Anonymous/data/tiny-imagenet-200"
 func = nn.Softmax(dim=1).cuda()
 val_dataset = get_TinyImageNet(mode="val", data_root=data_root)
 

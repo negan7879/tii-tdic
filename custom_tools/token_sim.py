@@ -192,12 +192,12 @@ model = PyramidVisionTransformer(
             qkv_bias=True,
             norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[3, 4, 18, 3], sr_ratios=[8, 4, 2, 1],
             num_classes=1000)
-# pretrained_dir = "/work/zhangzherui/data/weights/vit_base_finetune_tinyimagenet.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/deit_small_patch16_224-cd65a155.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
-# pretrained_dir = "/work/zhangzherui/data/weights/82.6_T2T_ViTt_24.pth.tar"
-pretrained_dir = "/work/zhangzherui/data/weights/pvt_medium.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/vit_base_finetune_tinyimagenet.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/deit_base_patch16_224-b5f2ef4d.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/deit_small_patch16_224-cd65a155.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/deit_tiny_patch16_224-a1311bcf.pth"
+# pretrained_dir = "/work/Anonymous/data/weights/82.6_T2T_ViTt_24.pth.tar"
+pretrained_dir = "/work/Anonymous/data/weights/pvt_medium.pth"
 
 
 weights_dict_ = torch.load(pretrained_dir, map_location="cpu")
@@ -214,7 +214,7 @@ print(model.load_state_dict(weights_dict, strict=True))
 
 model = model.cuda()
 
-# data_root = "/work/zhangzherui/data/tiny-imagenet-200"
+# data_root = "/work/Anonymous/data/tiny-imagenet-200"
 data_root = "/work/data/imagenet/"
 val_dataset = get_TinyImageNet(mode="val", data_root=data_root)
 

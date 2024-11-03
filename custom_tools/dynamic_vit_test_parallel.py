@@ -151,13 +151,13 @@ model = VisionTransformer(img_size=224,
 #                                   num_classes=num_classes,
 #                                   config_ic=config_ic,
 #                                   distilled=True)
-# with open('/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/last_checkpoint', 'r') as file:
+# with open('/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/last_checkpoint', 'r') as file:
 #     pretrained_dir = file.readline()
 
-# pretrained_dir = "/media/data/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_small.pth"
-pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_small.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_deit_tiny.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_base.pth"
+# pretrained_dir = "/media/data/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_small.pth"
+pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_small.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_deit_tiny.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_base.pth"
 weights_dict_ = torch.load(pretrained_dir, map_location="cpu")
 weights_dict = weights_dict_["state_dict"]
 checkpoint = OrderedDict()
@@ -178,8 +178,8 @@ for idx, ic in enumerate(model.ic_list):
 # model.ic_list[3].update_kept_token_number()
 # model.ic_list[6].update_kept_token_number()
 # model.ic_list[9].update_kept_token_number()
-# data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
-data_root = "/work/zhangzherui/data/tiny-imagenet-200"
+# data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
+data_root = "/work/Anonymous/data/tiny-imagenet-200"
 func = nn.Softmax(dim=1).cuda()
 val_dataset = get_TinyImageNet(mode="val", data_root=data_root)
 

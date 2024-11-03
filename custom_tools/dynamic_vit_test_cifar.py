@@ -107,7 +107,7 @@ result_dict[-1] = dict([("right",[]),("fault",[]),("len", 0)])
 for ic in ic_location:
     result_dict[ic] = dict([("right",[]),("fault",[]),("len", 0)])
 
-cfg = mmengine.Config.fromfile("/work/zhangzherui/code/mmpretrain/configs/myconfig/config_diffrate_vit_cifar.py")
+cfg = mmengine.Config.fromfile("/work/Anonymous/code/mmpretrain/configs/myconfig/config_diffrate_vit_cifar.py")
 # with tempfile.TemporaryDirectory() as tmpdir:
 #     cfg.work_dir = tmpdir
 #     runner = Runner.from_cfg(cfg)
@@ -164,14 +164,14 @@ model = VisionTransformer(img_size=224,
 #                                   num_classes=num_classes,
 #                                   config_ic=config_ic,
 #                                   distilled=True)
-# with open('/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/last_checkpoint', 'r') as file:
+# with open('/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/last_checkpoint', 'r') as file:
 #     pretrained_dir = file.readline()
 
-# pretrained_dir = "/media/data/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_small.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_deit_tiny.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_base.pth"
-# pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit_cifar/weights/dy_vit_t.pth"
-pretrained_dir = "/work/zhangzherui/code/mmpretrain/work_dirs/config_diffrate_vit_cifar/epoch_99.pth"
+# pretrained_dir = "/media/data/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_small.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_deit_tiny.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit/weights/epoch_300_vit_base.pth"
+# pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit_cifar/weights/dy_vit_t.pth"
+pretrained_dir = "/work/Anonymous/code/mmpretrain/work_dirs/config_diffrate_vit_cifar/epoch_99.pth"
 weights_dict_ = torch.load(pretrained_dir, map_location="cpu")
 weights_dict = weights_dict_["state_dict"]
 checkpoint = OrderedDict()
@@ -192,8 +192,8 @@ for idx, ic in enumerate(model.ic_list):
 # model.ic_list[3].update_kept_token_number()
 # model.ic_list[6].update_kept_token_number()
 # model.ic_list[9].update_kept_token_number()
-# data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
-# data_root = "/work/zhangzherui/data/tiny-imagenet-200"
+# data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
+# data_root = "/work/Anonymous/data/tiny-imagenet-200"
 func = nn.Softmax(dim=1).cuda()
 # val_dataset = get_TinyImageNet(mode="val", data_root=data_root)
 val_dataset = build_dataset(cfg.test_dataloader.dataset)

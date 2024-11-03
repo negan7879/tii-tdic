@@ -16,21 +16,21 @@ data_preprocessor = dict(
 
 server = "six_card"
 if server == "411":
-    pretrained_dir = "/datb/notebook/CPS/work1/attndistill/dino_deitsmall8_pretrain.pth"
-    data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+    pretrained_dir = "/datb/notebook/Anonymous/work1/attndistill/dino_deitsmall8_pretrain.pth"
+    data_root = "/datb/notebook/Anonymous/work1/data/tiny-imagenet-200"
 elif server == "old":
-    pretrained_dir = "/media/data1/zhangzherui/code/mmpretrain/model_latest.pth"
-    data_root = "/media/data1/zhangzherui/data/imagenet"
+    pretrained_dir = "/media/data1/Anonymous/code/mmpretrain/model_latest.pth"
+    data_root = "/media/data1/Anonymous/data/imagenet"
 elif server == "new":
-    data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
-    # data_root = "/media/data/zhangzherui/data/imagenet"
-    pretrained_dir = "/media/data/zhangzherui/code/VIT_DIST/weights/tinyimagenet/VIT_BASE/1.0/model_latest.pth"
-    # pretrained_dir = "/media/data/zhangzherui/code/mmpretrain/deit-tiny.pth"
+    data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
+    # data_root = "/media/data/Anonymous/data/imagenet"
+    pretrained_dir = "/media/data/Anonymous/code/VIT_DIST/weights/tinyimagenet/VIT_BASE/1.0/model_latest.pth"
+    # pretrained_dir = "/media/data/Anonymous/code/mmpretrain/deit-tiny.pth"
 elif server == "six_card":
-    data_root = "/work/zhangzherui/data/tiny-imagenet-200"
-    # pretrained_dir = "/work/zhangzherui/data/model_latest.pth"
+    data_root = "/work/Anonymous/data/tiny-imagenet-200"
+    # pretrained_dir = "/work/Anonymous/data/model_latest.pth"
     # small
-    pretrained_dir = "/work/zhangzherui/data/weights/vit_small_finetune_tinyimagenet.pth"
+    pretrained_dir = "/work/Anonymous/data/weights/vit_small_finetune_tinyimagenet.pth"
 
 
 batch_size = 64

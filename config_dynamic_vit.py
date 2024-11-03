@@ -18,14 +18,14 @@ data_preprocessor = dict(
 
 server = "new"
 if server == "411":
-    pretrained_dir = "/datb/notebook/CPS/work1/attndistill/dino_deitsmall8_pretrain.pth"
-    data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+    pretrained_dir = "/datb/notebook/Anonymous/work1/attndistill/dino_deitsmall8_pretrain.pth"
+    data_root = "/datb/notebook/Anonymous/work1/data/tiny-imagenet-200"
 elif server == "old":
-    pretrained_dir = "/media/data1/zhangzherui/code/mmpretrain/work_dirs/distiller/best_val_loss_epoch_796.pth"
-    data_root = "/media/data1/zhangzherui/data/imagenet"
+    pretrained_dir = "/media/data1/Anonymous/code/mmpretrain/work_dirs/distiller/best_val_loss_epoch_796.pth"
+    data_root = "/media/data1/Anonymous/data/imagenet"
 elif server == "new":
-    data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
-    # pretrained_dir = "/media/data/zhangzherui/code/VIT_DIST/weights/tinyimagenet/VIT_BASE/1.0/model_latest.pth"
+    data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
+    # pretrained_dir = "/media/data/Anonymous/code/VIT_DIST/weights/tinyimagenet/VIT_BASE/1.0/model_latest.pth"
 batch_size = 64
 model = dict(
     _delete_ = True,

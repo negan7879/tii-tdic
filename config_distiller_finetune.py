@@ -18,17 +18,17 @@ server = "411"
 model_type = "student"
 if server == "411":
     if model_type == "student":
-        pretrained_dir = "/datb/notebook/CPS/work1/mmpretrain/work_dirs/config_distiller_finetune/20230916_170242/epoch_426.pth"
+        pretrained_dir = "/datb/notebook/Anonymous/work1/mmpretrain/work_dirs/config_distiller_finetune/20230916_170242/epoch_426.pth"
     elif model_type == "teacher":
-        pretrained_dir = "/datb/notebook/CPS/work1/attndistill/dino_deitsmall8_pretrain.pth"
-    data_root = "/datb/notebook/CPS/work1/data/tiny-imagenet-200"
+        pretrained_dir = "/datb/notebook/Anonymous/work1/attndistill/dino_deitsmall8_pretrain.pth"
+    data_root = "/datb/notebook/Anonymous/work1/data/tiny-imagenet-200"
 elif server == "old":
-    # pretrained_dir = "/media/data1/zhangzherui/code/attndistill/dino_deitsmall8_pretrain.pth"
-    pretrained_dir = "/media/data1/zhangzherui/code/mmpretrain/work_dirs/distiller/best_val_loss_epoch_796.pth"
-    # data_root = "/media/data2/zhangzherui/data/tiny-imagenet-200"
-    data_root = "/media/data1/zhangzherui/data/imagenet"
+    # pretrained_dir = "/media/data1/Anonymous/code/attndistill/dino_deitsmall8_pretrain.pth"
+    pretrained_dir = "/media/data1/Anonymous/code/mmpretrain/work_dirs/distiller/best_val_loss_epoch_796.pth"
+    # data_root = "/media/data2/Anonymous/data/tiny-imagenet-200"
+    data_root = "/media/data1/Anonymous/data/imagenet"
 elif server == "new":
-    data_root = "/media/data/zhangzherui/data/tiny-imagenet-200"
+    data_root = "/media/data/Anonymous/data/tiny-imagenet-200"
 
 model = dict(
     _delete_ = True,
